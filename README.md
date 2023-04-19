@@ -1,38 +1,51 @@
-# create-svelte
+# Frontend Mentor - Age calculator app solution
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Creating a project
+## Table of contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Frontend Mentor - Age calculator app solution](#frontend-mentor---age-calculator-app-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Overview
 
-## Developing
+### The challenge
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Users should be able to:
 
-```bash
-npm run dev
+- View an age in years, months, and days after submitting a valid date through the form
+- Receive validation errors if:
+  - Any field is empty when the form is submitted
+  - The day number is not between 1-31
+  - The month number is not between 1-12
+  - The year is in the future
+  - The date is invalid e.g. 31/04/1991 (there are 30 days in April)
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Screenshot
 
-## Building
+![](/assets/images/desktop-view.png)
+![](/assets/images/mobile-view.png)
 
-To create a production version of your app:
+### Links
 
-```bash
-npm run build
-```
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-You can preview the production build with `npm run preview`.
+## My process
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Built with
+
+- [Svelte](https://svelte.dev/) - JS library
+- [TailwindCSS](https://tailwindcss.com/) - For styles
+- [dayjs](https://day.js.org/) - Lightweight version of moment.js
