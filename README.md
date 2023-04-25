@@ -16,8 +16,8 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### Screenshot
 
-![](/assets/images/desktop-view.png)
-![](/assets/images/mobile-view.png)
+![](/desktop-view.png)
+![](/mobile-view.png)
 
 ### Links
 
