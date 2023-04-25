@@ -4,6 +4,7 @@
   import dayjs from 'dayjs'
   import customParseFormat from 'dayjs/plugin/customParseFormat'
   import duration from 'dayjs/plugin/duration'
+  import { afterUpdate } from 'svelte'
   import icon from '../../assets/images/icon-arrow.svg'
   let day = 0
   let month = 0
@@ -15,9 +16,31 @@
   let dayErrorMsg = errorMsg
   let monthErrorMsg = errorMsg
   let yearErrorMsg = errorMsg
+  let yearDiv
+  let monthDiv
+  let dayDiv
 
   dayjs.extend(customParseFormat)
   dayjs.extend(duration)
+
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+      if (obj) obj.innerHTML = Math.floor(progress * (end - start) + start)
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      }
+    }
+    window.requestAnimationFrame(step)
+  }
+
+  afterUpdate(() => {
+    animateValue(yearDiv, 0, year, 500)
+    animateValue(monthDiv, 0, month, 500)
+    animateValue(dayDiv, 0, day, 500)
+  })
 
   function dateValidation(dayInput, monthInput, yearInput) {
     if (dayInput > 31 || dayInput < 1) {
@@ -208,7 +231,12 @@
     <div class="flex flex-col space-y-2 pb-0 pl-0 pr-0 pt-10 md:pb-8 md:pr-8 md:pt-8">
       <div class="flex flex-row items-center space-x-4 md:space-x-8">
         {#if year}
-          <p class="text-6xl font-extrabold italic text-purple-unique md:text-8xl">{year}</p>
+          <p
+            bind:this={yearDiv}
+            class="text-6xl font-extrabold italic text-purple-unique md:text-8xl"
+          >
+            {year}
+          </p>
           <p class="!ml-4 pb-2 text-6xl font-extrabold italic md:text-8xl">years</p>
         {:else}
           <div
@@ -220,7 +248,10 @@
       </div>
       <div class="flex flex-row items-center space-x-4 md:space-x-8">
         {#if month}
-          <p class="text-6xl font-extrabold italic text-purple-unique md:text-8xl">
+          <p
+            bind:this={monthDiv}
+            class="text-6xl font-extrabold italic text-purple-unique md:text-8xl"
+          >
             {month}
           </p>
           <p class="!ml-4 pb-2 text-6xl font-extrabold italic md:text-8xl">months</p>
@@ -234,7 +265,10 @@
       </div>
       <div class="flex flex-row items-center space-x-4 md:space-x-8">
         {#if day}
-          <p class="text-6xl font-extrabold italic text-purple-unique md:text-8xl">
+          <p
+            bind:this={dayDiv}
+            class="text-6xl font-extrabold italic text-purple-unique md:text-8xl"
+          >
             {day}
           </p>
           <p class="!ml-4 pb-2 text-6xl font-extrabold italic md:text-8xl">days</p>
