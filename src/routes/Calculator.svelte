@@ -125,7 +125,7 @@
     <form on:submit|preventDefault={handleSubmit}>
       <div class="flex flex-row space-x-2 pr-12 md:space-x-8">
         <label class="flex flex-col items-start">
-          <h1
+          <span
             class={classNames(
               'mb-2 text-sm font-bold uppercase tracking-widest text-smokey-grey md:tracking-[0.15em]',
               {
@@ -134,7 +134,7 @@
             )}
           >
             day
-          </h1>
+          </span>
           <input
             name="day"
             type="number"
@@ -146,16 +146,16 @@
               }
             )}
           />
-          <h1
+          <span
             class={classNames('invisible mt-2 text-sm', {
               '!visible mb-12 text-red-500 md:mb-0': dayInvalid
             })}
           >
             {dayErrorMsg}
-          </h1>
+          </span>
         </label>
         <label class="flex flex-col items-start">
-          <h1
+          <span
             class={classNames(
               'mb-2 text-sm font-bold uppercase tracking-widest text-smokey-grey md:tracking-[0.15em]',
               {
@@ -164,7 +164,7 @@
             )}
           >
             month
-          </h1>
+          </span>
           <input
             name="month"
             type="number"
@@ -176,16 +176,16 @@
               }
             )}
           />
-          <h1
+          <span
             class={classNames('invisible mt-2 text-sm', {
               '!visible mb-12 text-red-500 md:mb-0': monthInvalid
             })}
           >
             {monthErrorMsg}
-          </h1>
+          </span>
         </label>
         <label class="flex flex-col items-start">
-          <h1
+          <span
             class={classNames(
               'mb-2 text-sm font-bold uppercase tracking-widest text-smokey-grey md:tracking-[0.15em]',
               {
@@ -194,7 +194,7 @@
             )}
           >
             year
-          </h1>
+          </span>
           <input
             name="year"
             type="number"
@@ -206,13 +206,13 @@
               }
             )}
           />
-          <h1
+          <span
             class={classNames('invisible mt-2 text-sm', {
               '!visible mb-12 text-red-500 md:mb-0': yearInvalid
             })}
           >
             {yearErrorMsg}
-          </h1>
+          </span>
         </label>
       </div>
       <div class="relative flex flex-row md:mt-8">
