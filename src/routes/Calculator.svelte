@@ -218,7 +218,7 @@
       <div class="relative flex flex-row md:mt-8">
         <div class="w-full border-y-[1px] border-light-grey" />
         <div class="absolute inset-y-0 right-[7.5rem] flex items-center md:right-0">
-          <button type="submit">
+          <button type="submit" aria-label="Submit">
             <img
               src={icon}
               alt=""
