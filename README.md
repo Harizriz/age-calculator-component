@@ -16,12 +16,12 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### Screenshot
 
-![](/desktop-view.png)
-![](/mobile-view.png)
+![](/assets/images/desktop-view.png)
+![](/assets/images/mobile-view.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Harizriz/age-calculator-component)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
