@@ -21,8 +21,8 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [https://github.com/Harizriz/age-calculator-component]
-- Live Site URL: [https://calm-gumdrop-906216.netlify.app/]
+- Solution URL: [Press this link](https://github.com/Harizriz/age-calculator-component)
+- Live Site URL: [Press this link](https://calm-gumdrop-906216.netlify.app/)
 
 ## My process
 
